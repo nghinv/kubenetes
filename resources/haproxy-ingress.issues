@@ -1,0 +1,31 @@
+CrashLoopBackOff (back-off 5m0s restarting failed container=haproxy-ingress pod=haproxy-ingress-l5r27_ingress-controller(906e5baf-186a-446c-ad73-92990ee34c88)) | Last state: Terminated with : Completed, started: Sat, Dec 17 2022 11:06:47 pm, finished: Sat, Dec 17 2022 11:07:14 pm
+
+
+Container: haproxy-ingress
+ 
+ 
+Filter
+Disconnected
+I1217 16:11:16.390007 7 launch.go:276]
+Name: HAProxy
+Release: v0.13.9
+Build: git-9bfc261
+Repository: https://github.com/jcmoraisjr/haproxy-ingress
+I1217 16:11:16.390131 7 launch.go:279] watching for ingress resources with 'kubernetes.io/ingress.class' annotation: haproxy
+I1217 16:11:16.390142 7 launch.go:286] watching for ingress resources with IngressClass' controller name: haproxy-ingress.github.io/controller
+I1217 16:11:16.390163 7 launch.go:291] ignoring ingress resources without any class reference - --watch-ingress-without-class is false
+I1217 16:11:16.390384 7 launch.go:619] Creating API client for https://10.43.0.1:443
+I1217 16:11:16.411594 7 launch.go:635] Running in Kubernetes Cluster version v1.24 (v1.24.8) - git (clean) commit fdc77503e954d1ee641c0e350481f7528e8d068b - platform linux/amd64
+I1217 16:11:16.415866 7 launch.go:330] watching for global config options from configmap 'ingress-controller/haproxy-ingress' - --configmap was defined
+I1217 16:11:16.421816 7 launch.go:430] using 2 distinct annotations prefix, with the following precedence: haproxy-ingress.github.io, ingress.kubernetes.io
+I1217 16:11:16.927927 7 listers.go:162] loading object cache...
+E1217 16:11:16.933533 7 reflector.go:138] pkg/mod/k8s.io/client-go@v0.20.15/tools/cache/reflector.go:167: Failed to watch *v1.IngressClass: failed to list *v1.IngressClass: ingressclasses.networking.k8s.io is forbidden: User "system:serviceaccount:ingress-controller:ingress-controller" cannot list resource "ingressclasses" in API group "networking.k8s.io" at the cluster scope
+E1217 16:11:18.221847 7 reflector.go:138] pkg/mod/k8s.io/client-go@v0.20.15/tools/cache/reflector.go:167: Failed to watch *v1.IngressClass: failed to list *v1.IngressClass: ingressclasses.networking.k8s.io is forbidden: User "system:serviceaccount:ingress-controller:ingress-controller" cannot list resource "ingressclasses" in API group "networking.k8s.io" at the cluster scope
+E1217 16:11:21.330146 7 reflector.go:138] pkg/mod/k8s.io/client-go@v0.20.15/tools/cache/reflector.go:167: Failed to watch *v1.IngressClass: failed to list *v1.IngressClass: ingressclasses.networking.k8s.io is forbidden: User "system:serviceaccount:ingress-controller:ingress-controller" cannot list resource "ingressclasses" in API group "networking.k8s.io" at the cluster scope
+E1217 16:11:26.665005 7 reflector.go:138] pkg/mod/k8s.io/client-go@v0.20.15/tools/cache/reflector.go:167: Failed to watch *v1.IngressClass: failed to list *v1.IngressClass: ingressclasses.networking.k8s.io is forbidden: User "system:serviceaccount:ingress-controller:ingress-controller" cannot list resource "ingressclasses" in API group "networking.k8s.io" at the cluster scope
+E1217 16:11:35.877272 7 reflector.go:138] pkg/mod/k8s.io/client-go@v0.20.15/tools/cache/reflector.go:167: Failed to watch *v1.IngressClass: failed to list *v1.IngressClass: ingressclasses.networking.k8s.io is forbidden: User "system:serviceaccount:ingress-controller:ingress-controller" cannot list resource "ingressclasses" in API group "networking.k8s.io" at the cluster scope
+I1217 16:11:43.044329 7 main.go:47] Shutting down with signal terminated
+I1217 16:11:43.044366 7 controller.go:194] shutting down controller queues
+E1217 16:11:43.044515 7 listers.go:160] initial cache sync has timed out or shutdown has requested
+I1217 16:11:43.044543 7 controller.go:87] HAProxy Ingress successfully initialized
+I1217 16:11:43.044552 7 main.go:40] Exiting (0)
